@@ -15,7 +15,7 @@ import (
 const (
 	concurrency = 4
 	duration    = 10 * time.Second
-	host = "http://localhost:8080"
+	host        = "http://localhost:8080"
 )
 
 var requestLines = []request.RequestLine{

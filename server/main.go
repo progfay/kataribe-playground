@@ -16,13 +16,13 @@ type handler struct{}
 
 func randomStatus() int {
 	status := rand.Intn(600)
-		switch status {
-		case http.StatusBadGateway, http.StatusNotFound, http.StatusInternalServerError, http.StatusServiceUnavailable:
-			return status
+	switch status {
+	case http.StatusBadGateway, http.StatusNotFound, http.StatusInternalServerError, http.StatusServiceUnavailable:
+		return status
 
-		default:
-			return http.StatusOK
-		}
+	default:
+		return http.StatusOK
+	}
 }
 
 func (handler) ServeHTTP(w http.ResponseWriter, r *http.Request) {

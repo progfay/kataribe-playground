@@ -16,7 +16,7 @@ type RequestLine struct {
 func NewRequestLine(method, host, pattern string) RequestLine {
 	return RequestLine{
 		method:  method,
-		host: host,
+		host:    host,
 		pattern: pattern,
 	}
 }
@@ -30,7 +30,7 @@ func (r *RequestLine) NewRequest() (*http.Request, error) {
 	return req, nil
 }
 
-func generateRandomPath (pattern string) string {
+func generateRandomPath(pattern string) string {
 	buf := bytes.NewBuffer(nil)
 	inParam := false
 
